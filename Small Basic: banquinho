@@ -1,0 +1,86 @@
+While Newnome <> nome And senha <> Newsenha
+  TextWindow.WriteLine("logar(1) registrar(2)")
+  Resposta = TextWindow.ReadNumber()
+  Resposta2 = 0
+  logar = 1
+  registrar = 2
+  conta = 50
+  retirar = 1
+  depositar = 2
+  deslogar = 3
+  limite = -100
+
+  If Resposta = logar Then
+    TextWindow.WriteLine("coloque seu nome")
+    nome = TextWindow.Read()
+    TextWindow.WriteLine("coloque sua senha")
+    senha = TextWindow.ReadNumber()
+    
+    If (senha = Newsenha And nome = Newnome) Or (senha = 123 And nome = "adm") Then
+      TextWindow.WriteLine("bem vindo " + nome)
+      TextWindow.Pause()
+      TextWindow.Clear()
+      
+      While Resposta2 <> 3
+        Resposta2 = 0
+        retirar = 1
+        depositar = 2
+        TextWindow.WriteLine("Banco")
+        TextWindow.WriteLine("Você tem " + conta + " Reais")
+        TextWindow.WriteLine("Você deseja retirar(1) ou depositar(2) ou deslogar(3)")
+        Resposta2 = TextWindow.ReadNumber()
+        
+        If Resposta2 = retirar Then
+          TextWindow.WriteLine("quanto você deseja retirar?")
+          retirar = TextWindow.ReadNumber()
+          
+          If (conta - retirar) > -100 Then
+              conta = conta - retirar
+            TextWindow.WriteLine("Você retirou " + retirar + " agora você tem " + conta + " reais")      
+          
+        ElseIf conta - retirar <= limite then
+            TextWindow.WriteLine("Você ultrapassou seu limite!!!")
+          EndIf
+          
+          TextWindow.Pause()
+          TextWindow.Clear()
+          
+        ElseIf Resposta2 = depositar Then
+          TextWindow.WriteLine("Escolha quanto você deseja depositar")
+          depositar = TextWindow.ReadNumber()
+          conta = conta + depositar
+          TextWindow.WriteLine("você depositou " + depositar + " em sua conta")
+          TextWindow.WriteLine("saldo atual de " + conta + " reais")
+          TextWindow.Pause()
+          TextWindow.Clear()
+          
+        ElseIf Resposta2 = deslogar Then
+          TextWindow.Pause()
+          TextWindow.Clear()
+          
+        Else
+          TextWindow.WriteLine("Error")
+        EndIf
+      EndWhile
+      
+    Else
+      TextWindow.WriteLine("Senha ou nome incorreto tente novamente")
+      TextWindow.Pause()
+      TextWindow.Clear()
+    EndIf
+    
+  ElseIf Resposta = registrar Then
+    TextWindow.WriteLine("Crie sua conta")
+    TextWindow.WriteLine("coloque seu novo nome")
+    Newnome = TextWindow.Read()
+    TextWindow.WriteLine("Coloque sua nova senha")
+    Newsenha = TextWindow.ReadNumber()
+    TextWindow.Pause()
+    TextWindow.Clear()
+    
+  Else
+    TextWindow.WriteLine("Error")
+    TextWindow.Pause()
+    TextWindow.Clear()
+  EndIf
+EndWhile
