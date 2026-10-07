@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Faz o site se adaptar à tela do celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Um pedido especial 💗</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #ffd6e7,
+                #ffeef5
+            );
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           CORAÇÕES DO FUNDO
+        ========================= */
+
+        .coracao {
+            position: absolute;
+
+            color: rgba(255, 105, 150, 0.25);
+
+            font-size: 35px;
+
+            animation: flutuar 5s infinite ease-in-out;
+
+            pointer-events: none;
+        }
+
+        .c1 {
+            left: 8%;
+            top: 15%;
+        }
+
+        .c2 {
+            right: 8%;
+            top: 12%;
+
+            font-size: 45px;
+        }
+
+        .c3 {
+            left: 12%;
+            bottom: 15%;
+
+            font-size: 40px;
+        }
+
+        .c4 {
+            right: 10%;
+            bottom: 20%;
+        }
+
+
+        @keyframes flutuar {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
+
+        .conteudo {
+
+            width: 100%;
+            max-width: 550px;
+
+            text-align: center;
+
+            position: relative;
+            z-index: 2;
+
+        }
+
+
+        .coracao-grande {
+
+            font-size: 70px;
+
+            animation: bater 1.2s infinite;
+
+        }
+
+
+        @keyframes bater {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+        }
+
+
+        h1 {
+
+            margin: 15px 0;
+
+            color: #d94f7d;
+
+            font-size: 38px;
+
+        }
+
+
+        p {
+
+            color: #7d5264;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .pergunta {
+
+            margin-top: 25px;
+
+            color: #c74370;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .botoes {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            min-height: 65px;
+
+        }
+
+
+        button {
+
+            border: none;
+
+            border-radius: 50px;
+
+            padding: 14px 28px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: transform 0.2s;
+
+            -webkit-tap-highlight-color: transparent;
+
+        }
+
+
+        #sim {
+
+            background: #e85d8b;
+
+            color: white;
+
+            box-shadow:
+                0 8px 20px rgba(232, 93, 139, 0.3);
+
+        }
+
+
+        #sim:active {
+
+            transform: scale(0.95);
+
+        }
+
+
+        #nao {
+
+            background: white;
+
+            color: #d95b82;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+
+            position: relative;
+
+        }
+
+
+        /* =========================
+           MENSAGEM FINAL
+        ========================= */
+
+        #mensagem {
+
+            display: none;
+
+            margin-top: 30px;
+
+            animation: aparecer 0.8s ease;
+
+        }
+
+
+        #mensagem h2 {
+
+            color: #d94f7d;
+
+            font-size: 30px;
+
+        }
+
+
+        #mensagem p {
+
+            font-size: 18px;
+
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        /* =========================
+           CELULARES
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            body {
+
+                padding: 25px 20px;
+
+            }
+
+
+            .coracao-grande {
+
+                font-size: 60px;
+
+            }
+
+
+            h1 {
+
+                font-size: 30px;
+
+            }
+
+
+            p {
+
+                font-size: 17px;
+
+            }
+
+
+            .pergunta {
+
+                font-size: 21px;
+
+            }
+
+
+            button {
+
+                padding: 13px 24px;
+
+                font-size: 17px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CORAÇÕES -->
+
+    <div class="coracao c1">♡</div>
+
+    <div class="coracao c2">♥</div>
+
+    <div class="coracao c3">♡</div>
+
+    <div class="coracao c4">♥</div>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+
+        <div class="coracao-grande">
+            💗
+        </div>
+
+
+        <h1>
+            Tenho uma pergunta para você...
+        </h1>
+
+
+        <p>
+            Desde que você entrou na minha vida,
+            meus dias ficaram um pouquinho mais bonitos.
+        </p>
+
+
+        <p>
+            Então eu queria te fazer uma pergunta
+            que está guardada no meu coração...
+        </p>
+
+
+        <div class="pergunta">
+            Você quer namorar comigo? 💕
+        </div>
+
+
+        <div class="botoes">
+
+            <button id="sim">
+                Sim! 💗
+            </button>
+
+
+            <button id="nao">
+                Não 😢
+            </button>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+
+        <div id="mensagem">
+
+            <h2>
+                EU SABIA! 😭💗
+            </h2>
+
+
+            <p>
+                Prometo fazer o possível para tornar
+                cada momento ao seu lado especial. ❤️
+            </p>
+
+
+            <div style="font-size: 45px;">
+                💕💗💖💞
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <script>
+
+        const botaoNao = document.getElementById("nao");
+
+        const botaoSim = document.getElementById("sim");
+
+        const mensagem = document.getElementById("mensagem");
+
+
+        /*
+        =====================================
+        BOTÃO NÃO
+        =====================================
+        */
+
+
+        function fugir() {
+
+            const largura =
+                window.innerWidth - botaoNao.offsetWidth - 20;
+
+            const altura =
+                window.innerHeight - botaoNao.offsetHeight - 20;
+
+
+            const x =
+                Math.random() * largura + 10;
+
+            const y =
+                Math.random() * altura + 10;
+
+
+            botaoNao.style.position = "fixed";
+
+            botaoNao.style.left = x + "px";
+
+            botaoNao.style.top = y + "px";
+
+        }
+
+
+        /*
+        No computador:
+        quando o mouse passa por cima.
+        */
+
+        botaoNao.addEventListener(
+            "mouseover",
+            fugir
+        );
+
+
+        /*
+        No celular:
+        quando a pessoa toca no botão.
+        */
+
+        botaoNao.addEventListener(
+            "touchstart",
+            function(event) {
+
+                event.preventDefault();
+
+                fugir();
+
+            }
+        );
+
+
+        /*
+        =====================================
+        BOTÃO SIM
+        =====================================
+        */
+
+
+        botaoSim.addEventListener(
+            "click",
+            function() {
+
+                mensagem.style.display = "block";
+
+                botaoSim.style.display = "none";
+
+                botaoNao.style.display = "none";
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
