@@ -1,0 +1,674 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+/* ================= CONFIGURAÇÕES GERAIS ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #2d2f34;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+li,
+a,
+button {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 30px;
+
+    background-color: #bb5d05;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+.fundoC1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.fundoC1 img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+
+/* ================= MENU ================= */
+
+.coffee-links {
+    list-style: none;
+
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.coffee-links li {
+    margin-left: 30px;
+}
+
+
+.coffee-links li a {
+    transition: 0.3s;
+}
+
+
+.coffee-links li a:hover {
+    color: #ffcc00;
+}
+
+
+/* ================= BOTÃO CONTATO ================= */
+
+header button {
+    padding: 10px 20px;
+
+    background-color: #ffcc00;
+
+    border: none;
+
+    border-radius: 60px;
+
+    cursor: pointer;
+
+    color: #2d2f30;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+header button:hover {
+    background-color: #c49c00;
+
+    transform: scale(1.05);
+}
+
+
+/* ================= BANNER ================= */
+
+.banner-principal {
+    background-image: url('cafe.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 700px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.conteudo-banner h1 {
+    color: #ffffff;
+
+    font-size: 2.5rem;
+
+    font-weight: 700;
+
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.conteudo-banner p {
+    color: #ffcc00;
+
+    font-size: 1.2rem;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ================= SERVIÇOS ================= */
+
+.banner-segundo {
+
+    background-color: #3a2417;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ================= CARDÁPIO ================= */
+
+.secao-produtos {
+
+    padding: 60px 20px;
+
+    background-image: url('Backcafe.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.titulo-produtos {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    color: #4a2c0a;
+}
+
+
+.titulo-produtos h2 {
+
+    font-size: 2.2rem;
+
+    font-weight: 700;
+}
+
+
+.titulo-produtos p {
+
+    color: #8b5e3c;
+
+    margin-top: 8px;
+}
+
+
+/* ================= PRODUTOS ================= */
+
+.produtos {
+
+    display: flex;
+
+    gap: 30px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+
+    background-color: #6b3e26;
+
+    width: 260px;
+
+    min-height: 390px;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px 20px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    cursor: pointer;
+}
+
+
+.card:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.3);
+
+    z-index: 10;
+}
+
+
+/* ================= IMAGEM ================= */
+
+.card img {
+
+    width: 140px;
+
+    height: 140px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.card:hover img {
+
+    transform: scale(1.08);
+}
+
+
+/* ================= NOME ================= */
+
+.card h3 {
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    margin: 0;
+}
+
+
+/* ================= PREÇO ================= */
+
+.card .preco {
+
+    color: #ffcc00;
+
+    font-size: 1rem;
+
+    margin-top: 5px;
+
+    font-weight: 500;
+}
+
+
+/* ================= QUANTIDADE ================= */
+
+.quantidade {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+
+.quantidade button {
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #ffcc00;
+
+    color: #2d2f34;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+
+.quantidade button:hover {
+
+    background-color: #e0ad00;
+
+    transform: scale(1.1);
+}
+
+
+.numero {
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    min-width: 25px;
+
+    text-align: center;
+}
+
+
+/* ================= BOTÃO COMPRAR ================= */
+
+.comprar {
+
+    margin-top: 15px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #ffcc00;
+
+    color: #2d2f34;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.comprar:hover {
+
+    background-color: #e0ad00;
+
+    transform: scale(1.05);
+}
+
+
+/* Quando estiver comprado */
+
+.comprar.comprado {
+
+    background-color: #4caf50;
+
+    color: white;
+
+    cursor: default;
+
+    transform: none;
+}
+
+
+/* ================= SOBRE ================= */
+
+.Sobre {
+
+    background-color: #2d2f34;
+
+    padding: 80px 20px;
+}
+
+
+.Informacoes {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    color: #ffcc00;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+.Informacoes h1 {
+
+    font-size: 2.5rem;
+
+    margin-bottom: 30px;
+}
+
+
+.Informacoes h2 {
+
+    margin-top: 50px;
+
+    color: #ffffff;
+}
+
+
+.Informacoes p {
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= ENDEREÇO ================= */
+
+.secao-endereco {
+
+    min-height: 500px;
+
+    padding: 80px 20px;
+
+    background-color: #4a2c0a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.conteudo-secao {
+
+    color: white;
+
+    max-width: 700px;
+}
+
+
+.conteudo-secao h1 {
+
+    color: #ffcc00;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 30px;
+}
+
+
+.conteudo-secao p {
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ================= CONTATO ================= */
+
+.secao-contato {
+
+    min-height: 500px;
+
+    padding: 80px 20px;
+
+    background-color: #2d2f34;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 900px) {
+
+    .produtos {
+        gap: 25px;
+    }
+
+    .card {
+        width: 230px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    header {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding: 15px;
+    }
+
+
+    .fundoC1 img {
+
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .logo {
+
+        font-size: 22px;
+    }
+
+
+    li,
+    a,
+    button {
+
+        font-size: 14px;
+    }
+
+
+    .coffee-links {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+
+    .coffee-links li {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .card {
+
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+
+    .banner-principal {
+
+        height: 600px;
+    }
+
+
+    .conteudo-banner h1 {
+
+        font-size: 2rem;
+    }
+
+
+    .conteudo-banner p {
+
+        font-size: 1rem;
+    }
+}
