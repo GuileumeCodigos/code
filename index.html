@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,238 +5,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aurora Café</title>
+    <title>Um pedido especial 💗</title>
 
-    <link rel="stylesheet" href="index.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(135deg, #ffd6e7, #ffeef5);
+
+            overflow: hidden;
+        }
+
+        /* Corações no fundo */
+
+        .coracao {
+            position: absolute;
+            color: rgba(255, 105, 150, 0.25);
+            font-size: 30px;
+            animation: flutuar 6s infinite ease-in-out;
+        }
+
+        .c1 {
+            left: 10%;
+            top: 20%;
+        }
+
+        .c2 {
+            right: 15%;
+            top: 15%;
+            font-size: 45px;
+        }
+
+        .c3 {
+            left: 20%;
+            bottom: 15%;
+            font-size: 40px;
+        }
+
+        .c4 {
+            right: 10%;
+            bottom: 20%;
+        }
+
+        @keyframes flutuar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Conteúdo principal */
+
+        .conteudo {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .coracao-grande {
+            font-size: 80px;
+            animation: bater 1.2s infinite;
+        }
+
+        @keyframes bater {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        h1 {
+            color: #d94f7d;
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        p {
+            color: #7d5264;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .pergunta {
+            font-size: 25px;
+            font-weight: bold;
+            color: #c74370;
+            margin-top: 30px;
+        }
+
+        /* Área dos botões */
+
+        .botoes {
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            min-height: 70px;
+        }
+
+        button {
+            border: none;
+            border-radius: 50px;
+
+            padding: 15px 35px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #sim {
+            background: #e85d8b;
+            color: white;
+
+            box-shadow: 0 8px 20px rgba(232, 93, 139, 0.3);
+        }
+
+        #sim:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 25px rgba(232, 93, 139, 0.4);
+        }
+
+        #nao {
+            background: #fff;
+            color: #d95b82;
+
+            position: relative;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Mensagem final */
+
+        #mensagem {
+            display: none;
+            margin-top: 30px;
+
+            animation: aparecer 0.8s ease;
+        }
+
+        #mensagem h2 {
+            color: #d94f7d;
+            font-size: 32px;
+        }
+
+        #mensagem p {
+            font-size: 20px;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header>
+    <!-- Corações do fundo -->
 
-        <div class="fundoC1">
-            <img src="logo.png" alt="Logo Aurora Café">
-            <span class="logo">Aurora Café</span>
+    <div class="coracao c1">♡</div>
+    <div class="coracao c2">♥</div>
+    <div class="coracao c3">♡</div>
+    <div class="coracao c4">♥</div>
+
+
+    <!-- Conteúdo -->
+
+    <main class="conteudo">
+
+        <div class="coracao-grande">
+            💗
         </div>
 
-        <nav>
-            <ul class="coffee-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#endereco">Endereço</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre nós</a></li>
-            </ul>
-        </nav>
+        <h1>Tenho uma pergunta para você...</h1>
 
-        <a href="#contato">
-            <button>Contato</button>
-        </a>
+        <p>
+            Desde que você entrou na minha vida,
+            meus dias ficaram um pouquinho mais bonitos.
+        </p>
 
-    </header>
+        <p>
+            Então eu queria te fazer uma pergunta
+            que está guardada no meu coração...
+        </p>
 
-
-    <!-- ================= BANNER PRINCIPAL ================= -->
-    <section class="banner-principal">
-
-        <div class="conteudo-banner">
-            <h1>Bem-vindo ao Aurora Café</h1>
-            <p>Onde cada dia começa com o aroma perfeito.</p>
-        </div>
-
-    </section>
-
-
-    <!-- ================= SERVIÇOS ================= -->
-    <section class="banner-segundo" id="servicos">
-
-        <div class="conteudo-banner">
-            <h1>Conheça nossos serviços</h1>
-            <p>Feitos para tornar seu momento ainda mais especial.</p>
-        </div>
-
-    </section>
-
-
-    <!-- ================= CARDÁPIO ================= -->
-    <section class="secao-produtos" id="cardapio">
-
-        <div class="titulo-produtos">
-            <h2>Nossos Cafés</h2>
-            <p>Escolha seu café favorito</p>
+        <div class="pergunta">
+            Você quer namorar comigo? 💕
         </div>
 
 
-        <div class="produtos">
+        <div class="botoes">
 
-            <!-- ================= CAFÉ 1 ================= -->
-            <div class="card">
+            <button id="sim">
+                Sim! 💗
+            </button>
 
-                <img src="cafewhite.png" alt="Café branco">
+            <button id="nao">
+                Não 😢
+            </button>
 
-                <h3>Café branco</h3>
-
-                <span class="preco">R$ 8,00</span>
-
-
-                <div class="quantidade">
-
-                    <button class="menos">−</button>
-
-                    <span class="numero">1</span>
-
-                    <button class="mais">+</button>
-
-                </div>
+        </div>
 
 
-                <button class="comprar">
-                    Comprar
-                </button>
+        <!-- Aparece quando clicar em SIM -->
 
-            </div>
+        <div id="mensagem">
 
+            <h2>
+                EU SABIA! 😭💗
+            </h2>
 
-            <!-- ================= CAFÉ 2 ================= -->
-            <div class="card">
+            <p>
+                Prometo fazer o possível para tornar
+                cada momento ao seu lado especial. ❤️
+            </p>
 
-                <img src="coffee.jpg" alt="Café grande">
-
-                <h3>Café grande</h3>
-
-                <span class="preco">R$ 12,00</span>
-
-
-                <div class="quantidade">
-
-                    <button class="menos">−</button>
-
-                    <span class="numero">1</span>
-
-                    <button class="mais">+</button>
-
-                </div>
-
-
-                <button class="comprar">
-                    Comprar
-                </button>
-
-            </div>
-
-
-            <!-- ================= CAFÉ 3 ================= -->
-            <div class="card">
-
-                <img src="cafepixel.jpg" alt="Café em pixel">
-
-                <h3>Café em pixel</h3>
-
-                <span class="preco">R$ 14,00</span>
-
-
-                <div class="quantidade">
-
-                    <button class="menos">−</button>
-
-                    <span class="numero">1</span>
-
-                    <button class="mais">+</button>
-
-                </div>
-
-
-                <button class="comprar">
-                    Comprar
-                </button>
-
+            <div style="font-size: 50px;">
+                💕💗💖💞
             </div>
 
         </div>
 
-    </section>
+    </main>
 
 
-    <!-- ================= SOBRE ================= -->
-    <section class="Sobre" id="sobre">
+    <script>
 
-        <div class="Informacoes">
-
-            <h1>Sobre a Aurora Café</h1>
-
-            <p>
-                Nascida da paixão por cultivar bons momentos e conectar
-                pessoas através do afeto, a Aurora Café surgiu do sonho
-                de criar um refúgio acolhedor no coração da correria da cidade.
-            </p>
-
-            <h2>O Espaço e o Cardápio</h2>
-
-            <p>
-                Com um ambiente charmoso, iluminação suave e decoração
-                rústica-moderna, o espaço convida tanto para conversas
-                agradáveis quanto para momentos tranquilos de leitura ou trabalho.
-            </p>
-
-            <p>
-                Nosso cardápio é uma celebração do bom gosto:
-                oferecemos cafés especiais de grãos selecionados,
-                métodos de extração artesanais, chás aromáticos e
-                uma variedade de acompanhamentos fresquinhos.
-            </p>
-
-            <p>
-                Venha saborear momentos inesquecíveis e recarregar
-                suas energias na Aurora Café.
-            </p>
-
-        </div>
-
-    </section>
+        const botaoNao = document.getElementById("nao");
+        const botaoSim = document.getElementById("sim");
+        const mensagem = document.getElementById("mensagem");
 
 
-    <!-- ================= ENDEREÇO ================= -->
-    <section class="secao-endereco" id="endereco">
+        // Faz o botão "Não" fugir
 
-        <div class="conteudo-secao">
+        botaoNao.addEventListener("mouseover", function() {
 
-            <h1>Onde estamos</h1>
+            const largura = window.innerWidth - botaoNao.offsetWidth;
+            const altura = window.innerHeight - botaoNao.offsetHeight;
 
-            <p>Venha nos visitar e tomar um café conosco.</p>
+            const x = Math.random() * largura;
+            const y = Math.random() * altura;
 
-            <p>📍 Rua das Flores, 123</p>
+            botaoNao.style.position = "fixed";
+            botaoNao.style.left = x + "px";
+            botaoNao.style.top = y + "px";
 
-            <p>São Paulo - SP</p>
-
-            <p>Segunda a sábado: 08:00 às 20:00</p>
-
-        </div>
-
-    </section>
+        });
 
 
-    <!-- ================= CONTATO ================= -->
-    <section class="secao-contato" id="contato">
+        // Quando clicar em SIM
 
-        <div class="conteudo-secao">
+        botaoSim.addEventListener("click", function() {
 
-            <h1>Entre em contato</h1>
+            mensagem.style.display = "block";
 
-            <p>Ficou com alguma dúvida? Fale conosco!</p>
+            botaoSim.style.display = "none";
+            botaoNao.style.display = "none";
 
-            <p>📞 (11) 99999-9999</p>
+        });
 
-            <p>✉️ contato@auroracafe.com</p>
-
-        </div>
-
-    </section>
-
-
-    <!-- JavaScript -->
-    <script src="index.js"></script>
+    </script>
 
 </body>
 
 </html>
-```
